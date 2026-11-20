@@ -138,8 +138,10 @@ body.b{background:#E9E1D2;color:var(--tinta)}
 .b .ranura{position:absolute;left:50%;top:16px;width:48px;height:10px;margin-left:-24px;border-radius:6px;background:var(--crema);box-shadow:inset 0 1px 3px rgba(0,0,0,.25);z-index:2}
 .b .credencial .logo{position:absolute;left:14px;top:40px;height:48px;z-index:2}
 .b .credencial .equipo{position:absolute;right:20px;top:58px;font-size:12px;font-weight:500;color:rgba(42,36,32,.7);z-index:2}
-.b .credencial .desenfoque{position:absolute;left:0;right:0;top:57.7%;bottom:0;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);-webkit-mask-image:linear-gradient(transparent,#000 70%);mask-image:linear-gradient(transparent,#000 70%);pointer-events:none}
-.b .credencial .fundido{position:absolute;left:0;right:0;top:52%;bottom:0;background:linear-gradient(rgba(18,17,16,0),rgba(18,17,16,.78) 50%,#121110);pointer-events:none}
+.b .credencial img.desenfoque{position:absolute;left:0;top:14%;width:100%;height:70%;object-fit:cover;object-position:50% 0;filter:blur(14px) saturate(.9);transform:scale(1.04);-webkit-mask-image:linear-gradient(transparent 52%,#000 78%);mask-image:linear-gradient(transparent 52%,#000 78%);pointer-events:none}
+.js .credencial img.desenfoque{opacity:0;transition:opacity .7s ease}
+.js .listo img.desenfoque{opacity:1}
+.b .credencial .fundido{position:absolute;left:0;right:0;top:52%;bottom:0;background:linear-gradient(rgba(18,17,16,0),rgba(18,17,16,.8) 40%,#121110 62%);pointer-events:none}
 .b .credencial .g1,.b .credencial .g2{position:absolute;border-radius:50%;filter:blur(40px);pointer-events:none}
 .b .credencial .g1{left:-20%;bottom:-14%;width:64%;height:27%;background:rgba(194,65,28,.75)}
 .b .credencial .g2{right:-20%;bottom:-12%;width:53%;height:23%;background:rgba(201,154,62,.6)}
@@ -217,7 +219,7 @@ body.b{background:#E9E1D2;color:var(--tinta)}
     <div class="estudio"></div>
     <span class="carga" aria-hidden="true"><i class="cab"></i><i class="hom"></i></span>
     <img class="retrato" src="../assets/fotos/pedro-morantes-de309b94.jpg" alt="Pedro Morantes" width="900" height="900" fetchpriority="high">
-    <div class="desenfoque"></div><div class="fundido"></div><div class="g1"></div><div class="g2"></div>
+    <img class="desenfoque" src="../assets/fotos/pedro-morantes-de309b94.jpg" alt="" aria-hidden="true" width="900" height="900"><div class="fundido"></div><div class="g1"></div><div class="g2"></div>
     <span class="ranura"></span>
     <img class="logo" src="../assets/logo-pafia.png" alt="PAFIA" width="96" height="48">
     <span class="equipo">Equipo comercial</span>
